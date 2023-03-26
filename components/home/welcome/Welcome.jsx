@@ -6,12 +6,30 @@ import { View, Text, FlatList, TextInput, TouchableOpacity } from 'react-native'
 import styles from './welcome.style'
 
 const Welcome = () => {
+  const router = useRouter();
   return (
     <View>
-      <Text>Welcome</Text>
+      <View style={styles.container}>
+        <Text style={styles.userName}>Hello Kim</Text>
+        <Text style={styles.welcomeMessage}>Find your perfect Job</Text>
+      </View>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+          <TextInput
+           style={styles.searchInput}
+           value=""
+           placeholder='what are you searching for'
+           onChange={()=>{}}
+            />
+        </View>
+        <TouchableOpacity>
+          <Image
+          source={icons.search}
+          />
+        </TouchableOpacity>
+      </View>
     </View>
   )
 }
 
 export default Welcome
-// git remote add origin https://github.com/Evan-cell/jobs.git
